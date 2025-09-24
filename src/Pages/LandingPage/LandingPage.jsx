@@ -1,19 +1,9 @@
 import React, { useState } from 'react';
 import './LandingPage.css'; 
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 
 const LandingPage = () => {
     const [selectedRole, setSelectedRole] = useState('student');
-    const navigate = useNavigate();
-
-    const handleContinue = () => {
-        if (selectedRole === 'student') {
-            navigate('/student'); 
-        } else {
-            navigate('/teacher');
-        }
-    };
 
     return (
         <div className="landing-container">
@@ -33,7 +23,7 @@ const LandingPage = () => {
                 >
                     <h2 className="role-title">I'm a Student</h2>
                     <p className="role-description">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Submit answers and view live poll results in real-time.
                     </p>
                 </div>
 
@@ -43,14 +33,17 @@ const LandingPage = () => {
                 >
                     <h2 className="role-title">I'm a Teacher</h2>
                     <p className="role-description">
-                        Submit answers and view live poll results in real-time.
+                        Create polls and view live results instantly.
                     </p>
                 </div>
             </div>
 
-            <button className="continue-button" onClick={handleContinue}>
-                Continue
-            </button>
+            {/* Dynamic Link based on selectedRole */}
+            <Link to={`/${selectedRole}`}>
+                <button className="continue-button">
+                    Continue
+                </button>
+            </Link>
         </div>
     );
 };
