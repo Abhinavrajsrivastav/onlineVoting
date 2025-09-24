@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import './LandingPage.css'; 
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const LandingPage = () => {
     const [selectedRole, setSelectedRole] = useState('student');
+    const navigate = useNavigate();
 
     const handleContinue = () => {
         if (selectedRole === 'student') {
-            window.location.href = '/student'; 
+            navigate('/student'); 
         } else {
-            window.location.href = '/teacher'; 
+            navigate('/teacher');
         }
     };
 
