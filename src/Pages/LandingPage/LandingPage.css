@@ -1,0 +1,122 @@
+/* Import a nice font like 'Poppins' from Google Fonts (add this to your public/index.html or main CSS file) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Define color variables for easy management */
+:root {
+    --primary-gradient: linear-gradient(90deg, #845EEE, #6034B7);
+    --border-color: #845EEE;
+    --text-dark: #333;
+    --text-light: #666;
+    --bg-light: #ffffff;
+    --bg-very-light: #f7f5ff;
+    --shadow-color: rgba(132, 94, 238, 0.2);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.poll-tag {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.plus-icon {
+    font-weight: bold;
+}
+
+.main-heading {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin: 0 0 0.5rem 0;
+}
+
+.sub-heading {
+    font-size: 1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin-bottom: 3rem;
+}
+
+.roles-wrapper {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.role-box {
+    background-color: var(--bg-light);
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 280px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.role-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.role-box.selected {
+    border-color: var(--border-color);
+    background-color: var(--bg-very-light);
+    box-shadow: 0 8px 30px var(--shadow-color);
+}
+
+.role-title {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    margin: 0 0 0.5rem 0;
+}
+
+.role-description {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.continue-button {
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.continue-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px var(--shadow-color);
+}

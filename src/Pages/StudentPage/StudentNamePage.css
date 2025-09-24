@@ -1,0 +1,108 @@
+/* Import a font for a better look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Define color variables */
+:root {
+    --primary-gradient: linear-gradient(90deg, #845EEE, #6034B7);
+    --border-color: #845EEE;
+    --text-dark: #333;
+    --text-light: #666;
+    --bg-light: #ffffff;
+    --shadow-color: rgba(132, 94, 238, 0.2);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.student-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.poll-tag {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.main-heading {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin: 0 0 0.5rem 0;
+}
+
+.sub-heading {
+    font-size: 1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin-bottom: 3rem;
+}
+
+.input-wrapper {
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    margin-bottom: 2.5rem;
+}
+
+.input-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.name-input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    background-color: #f9fafb;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+    transition: border-color 0.3s ease;
+}
+
+.name-input::placeholder {
+    color: #ccc;
+}
+
+.name-input:focus {
+    outline: none;
+    border-color: var(--border-color);
+}
+
+.continue-button {
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.continue-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px var(--shadow-color);
+}

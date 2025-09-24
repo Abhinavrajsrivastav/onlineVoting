@@ -1,0 +1,82 @@
+/* Import a font for a professional look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --primary-gradient: linear-gradient(90deg, #845EEE, #6034B7);
+    --primary-color: #845EEE;
+    --text-dark: #333;
+    --bg-light: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    margin: 0;
+}
+
+.waiting-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    width: 100%;
+    position: relative; 
+    box-sizing: border-box;
+}
+
+.poll-tag {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+/* Spinner Animation Definition */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Spinner Styling */
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 8px solid transparent; 
+    border-top-color: var(--primary-color); /* This creates the C-shape */
+    border-radius: 50%;
+    animation: spin 1s linear infinite; /* Apply the rotation animation */
+    margin-bottom: 2rem;
+}
+
+.waiting-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+/* Chat Icon Button Styling */
+.chat-icon-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background: var(--primary-gradient);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(132, 94, 238, 0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+.chat-icon-btn:hover {
+    transform: scale(1.1);
+}
