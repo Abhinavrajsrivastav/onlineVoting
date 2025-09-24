@@ -2,8 +2,8 @@
 
 :root {
     --primary-gradient: linear-gradient(90deg, #845EEE, #6034B7);
-    --primary-color: #6D28D9; /* A solid purple for consistency */
-    --primary-light: #F5F3FF; /* Light purple for selected background */
+    --primary-color: #6D28D9; 
+    --primary-light: #F5F3FF; 
     --text-dark: #1F2937;
     --text-light: #6B7280;
     --border-color: #E5E7EB;

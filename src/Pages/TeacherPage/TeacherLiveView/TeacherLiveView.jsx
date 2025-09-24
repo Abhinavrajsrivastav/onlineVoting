@@ -58,7 +58,6 @@ const TeacherLiveView = ({ socket, poll, participants, messages }) => {
     return (
         <div className="tlv-wrapper">
             <div className="tlv-main-content">
-                {/* --- Left Column: Poll View --- */}
                 <div className="tlv-poll-view">
                     <h2 className="tlv-title">Question</h2>
                     <div className="tlv-poll-box">
@@ -81,7 +80,6 @@ const TeacherLiveView = ({ socket, poll, participants, messages }) => {
                     <button onClick={handleNewQuestion} className="tlv-new-q-btn">+ Ask a new question</button>
                 </div>
 
-                {/* --- Right Column: Participants & Chat Panel (conditionally shown) --- */}
                 {panelOpen && (
                     <div className="tlv-participants-view">
                         <div className="tlv-tabs">
@@ -157,7 +155,6 @@ const TeacherLiveView = ({ socket, poll, participants, messages }) => {
                 )}
             </div>
 
-            {/* --- Purple Chat Button --- */}
             <button
                 className="chat-icon-btn"
                 aria-label="Open Chat"

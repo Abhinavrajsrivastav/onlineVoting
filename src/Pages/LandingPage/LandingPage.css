@@ -1,7 +1,7 @@
 /* Import a nice font like 'Poppins' from Google Fonts (add this to your public/index.html or main CSS file) */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-/* Define color variables for easy management */
+
 :root {
     --primary-gradient: linear-gradient(90deg, #845EEE, #6034B7);
     --border-color: #845EEE;

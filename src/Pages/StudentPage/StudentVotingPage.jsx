@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import './StudentVotingPage.css'; // The CSS for styling
+import './StudentVotingPage.css';
 
 const StudentVotingPage = () => {
-    // State to track which option is clicked before submitting
     const [selectedOptionId, setSelectedOptionId] = useState(1); // Default to 'Mars' being selected as in the image
-    // State for the countdown timer
     const [timeLeft, setTimeLeft] = useState(15);
 
-    // Dummy poll data to match the image
     const poll = {
         question: "Which planet is known as the Red Planet?",
         options: [
@@ -18,19 +15,16 @@ const StudentVotingPage = () => {
         ]
     };
 
-    // Effect to handle the countdown timer
     useEffect(() => {
         const timer = setInterval(() => {
             setTimeLeft((prevTime) => (prevTime > 0 ? prevTime - 1 : 0));
         }, 1000);
-        // Cleanup interval on component unmount
         return () => clearInterval(timer);
     }, []);
 
     const handleSubmit = () => {
         if (selectedOptionId !== null) {
             alert(`Submitting answer: ${poll.options.find(opt => opt.id === selectedOptionId).text}`);
-            // In a real app, you would emit this to a server
         } else {
             alert("Please select an answer.");
         }

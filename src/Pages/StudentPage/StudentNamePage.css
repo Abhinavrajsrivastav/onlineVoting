@@ -1,7 +1,6 @@
 /* Import a font for a better look */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-/* Define color variables */
 :root {
     --primary-gradient: linear-gradient(90deg, #845EEE, #6034B7);
     --border-color: #845EEE;
